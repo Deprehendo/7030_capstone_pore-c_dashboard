@@ -1,0 +1,53 @@
+# Reference genomes for GC eigenvectors and future Section 1 alignment.
+# FASTA is downloaded on first use into workspace/references/ (not bundled in repo).
+#
+# IMPORTANT: Hi-C / Pore-C mcools (incl. GSE149117) use UCSC-style names (chr1, …).
+# Use UCSC primary FASTA — NCBI RefSeq accessions (NC_*) will not match.
+
+hg38:
+  display_name: "Human — GRCh38 (hg38)"
+  organism: homo_sapiens
+  assembly: GRCh38
+  chrom_style: ucsc
+  url: "https://hgdownload.soe.ucsc.edu/goldenPath/hg38/bigZips/hg38.fa.gz"
+  local_name: "hg38.ucsc.fa"
+  notes: >
+    UCSC hg38 primary + alt contigs (chr* naming). Required for GSE149117 mcool.
+    ~950 MB download.
+
+hg19:
+  display_name: "Human — GRCh37 (hg19)"
+  organism: homo_sapiens
+  assembly: GRCh37
+  chrom_style: ucsc
+  url: "https://hgdownload.soe.ucsc.edu/goldenPath/hg19/bigZips/hg19.fa.gz"
+  local_name: "hg19.ucsc.fa"
+  notes: >
+    UCSC hg19 for legacy Hi-C / Pore-C mcools built on GRCh37. ~900 MB download.
+
+sacCer3:
+  display_name: "Yeast — sacCer3 (S288C)"
+  organism: saccharomyces_cerevisiae
+  assembly: sacCer3
+  chrom_style: ucsc
+  url: "https://hgdownload.soe.ucsc.edu/goldenPath/sacCer3/bigZips/sacCer3.fa.gz"
+  local_name: "sacCer3.fa"
+  notes: "Original project demo organism; UCSC naming (chrI, chrII, …)."
+
+mm10:
+  display_name: "Mouse — GRCm38 (mm10)"
+  organism: mus_musculus
+  assembly: GRCm38
+  chrom_style: ucsc
+  url: "https://hgdownload.soe.ucsc.edu/goldenPath/mm10/bigZips/mm10.fa.gz"
+  local_name: "mm10.ucsc.fa"
+  notes: "UCSC mm10 (chr* naming) — most common mouse reference in Hi-C / Pore-C."
+
+mm39:
+  display_name: "Mouse — GRCm39 (mm39)"
+  organism: mus_musculus
+  assembly: GRCm39
+  chrom_style: ucsc
+  url: "https://hgdownload.soe.ucsc.edu/goldenPath/mm39/bigZips/mm39.fa.gz"
+  local_name: "mm39.ucsc.fa"
+  notes: "UCSC mm39 (chr* naming) for newer mouse Pore-C / Hi-C datasets."

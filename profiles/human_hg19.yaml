@@ -1,0 +1,32 @@
+# Human (GRCh37 / hg19) defaults for legacy Section 2 datasets.
+organism: homo_sapiens
+display_name: "Human (GRCh37 / hg19)"
+default_cutter: DpnII
+reference_genome: hg19
+compartment:
+  default_method: gc
+  call_resolution_bp: 100000
+  preferred_resolution_bp: 100000
+  view_resolution_bp: 10000
+  phasing_note: >
+    Prefer RNA-seq, H3K27ac, or DNase uploaded as a track.
+    GC from hg19 FASTA works as a fallback but correlates weakly with A/B in mammals.
+tad:
+  method: insulation
+  preferred_resolution_bp: 10000
+  window_multipliers: [10, 25]
+ui:
+  exclude_chromosomes: [chrM, chrMT, MT, chrEBV, EBV]
+  exclude_patterns:
+    - "chrUn_*"
+    - "*_random*"
+    - "*_alt*"
+    - "GL*"
+    - "KI*"
+    - "*EBV*"
+  compartment_exclude: [chrY]
+  genome_wide_min_resolution_bp: 50000
+  genome_wide_max_bins: 15000
+  notes: >
+    Legacy GRCh37 reference. Compartments at **100 kb**; maps/TADs at **10 kb**.
+    Genome-wide maps: use **≥ 50 kb**.

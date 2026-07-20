@@ -1,0 +1,16 @@
+# Normalized working copies of mcool files (never commit large data)
+workspace/
+*.mcool
+!assets/
+__pycache__/
+.ipynb_checkpoints/
+.streamlit/
+
+# Personal / local-only (not for GitHub)
+Pore_C_wt_analysis.ipynb
+sacCer3.fa
+sacCer3.fa.fai
+note
+
+# Large local data
+pairs/

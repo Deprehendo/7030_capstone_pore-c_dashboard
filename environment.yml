@@ -1,0 +1,23 @@
+name: 7030_capstone_project
+channels:
+    - conda-forge
+    - bioconda
+    - defaults
+dependencies:
+    - python=3.10
+    - jupyterlab
+    - ipykernel
+    - r-base
+    - r-irkernel
+    - cooler
+    - cooltools
+    - bioframe
+    - numpy
+    - pandas
+    - matplotlib
+    - scipy
+    - pyyaml
+    - pysam
+    - pip
+    - pip:
+        - streamlit>=1.28

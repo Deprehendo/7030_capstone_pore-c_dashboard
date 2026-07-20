@@ -1,0 +1,24 @@
+# Yeast (S. cerevisiae) defaults for Section 2 / later Section 1
+organism: saccharomyces_cerevisiae
+display_name: "Brewer's yeast (sacCer3 / S288C)"
+default_cutter: NlaIII
+compartment:
+  default_method: gc
+  call_resolution_bp: 25000
+  preferred_resolution_bp: 25000
+  view_resolution_bp: 10000
+  phasing_note: >
+    GC from sacCer3 FASTA is the standard choice and matches the project notebook.
+tad:
+  method: insulation
+  preferred_resolution_bp: 10000
+  window_multipliers: [10, 25]
+ui:
+  exclude_chromosomes: [chrM, chrMT, MT]
+  exclude_patterns: []
+  compartment_exclude: []
+  genome_wide_min_resolution_bp: 10000
+  genome_wide_max_bins: 5000
+  notes: >
+    Compartment calling at **25 kb**; chromosome/TAD maps at **10 kb** when depth allows.
+    Genome-wide at 25 kb is fine for the small yeast genome.

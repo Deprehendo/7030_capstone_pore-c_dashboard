@@ -1,0 +1,30 @@
+# Mouse (GRCm38 / mm10) defaults for Section 2
+organism: mus_musculus
+display_name: "Mouse (GRCm38 / mm10)"
+default_cutter: DpnII
+reference_genome: mm10
+compartment:
+  default_method: gc
+  call_resolution_bp: 100000
+  preferred_resolution_bp: 100000
+  view_resolution_bp: 10000
+  phasing_note: >
+    Prefer RNA-seq or H3K27ac for phasing; GC from mm10 FASTA is a fallback.
+tad:
+  method: insulation
+  preferred_resolution_bp: 10000
+  window_multipliers: [10, 25]
+ui:
+  exclude_chromosomes: [chrM, chrMT, MT, chrEBV, EBV]
+  exclude_patterns:
+    - "chrUn_*"
+    - "*_random*"
+    - "*_alt*"
+    - "GL*"
+    - "*EBV*"
+  compartment_exclude: [chrY]
+  genome_wide_min_resolution_bp: 50000
+  genome_wide_max_bins: 15000
+  notes: >
+    Mammalian defaults: compartments at **100 kb**, maps/TADs at **10 kb**.
+    Genome-wide maps: use **≥ 50 kb**.

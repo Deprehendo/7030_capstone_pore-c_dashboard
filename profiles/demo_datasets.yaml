@@ -1,0 +1,28 @@
+# Public demo mcool files — explicit download (not auto-fetched at startup).
+# Cached under workspace/demo/ after user clicks download in the sidebar.
+
+gse149117_hcc1954_smallest:
+  display_name: "Human Pore-C — HCC1954 (GSE149117, ~360 MB)"
+  series: GSE149117
+  organism: homo_sapiens
+  assembly: GRCh38
+  gsm: GSM4490690
+  reference_genome: hg38
+  url: "https://www.ncbi.nlm.nih.gov/geo/download/?acc=GSM4490690&format=file&file=GSM4490690_HCC1954_DpnII_7d7ab_GRCh38_bwa_0.7.17_sensitive_NoPhase_whatshap_0.19.c01520_default_cf00.mcool"
+  local_name: "GSE149117_HCC1954_7d7ab.mcool"
+  size_hint: "~360 MB"
+  notes: >
+    Nature Biotech 2022 Pore-C paper (Deshpande et al.). Smallest replicate in
+    the series — good default for open-source demo and testing.
+
+gse149117_lncap:
+  display_name: "Human Pore-C — LNCaP (GSE149117, ~2.8 GB)"
+  series: GSE149117
+  organism: homo_sapiens
+  assembly: GRCh38
+  gsm: GSM5923734
+  reference_genome: hg38
+  url: "https://www.ncbi.nlm.nih.gov/geo/download/?acc=GSM5923734&format=file&file=GSM5923734_LNCaP_Set1_0hour_PAG48791_GRCh38_unphased.matrix.mcool"
+  local_name: "GSE149117_LNCaP.mcool"
+  size_hint: "~2.8 GB"
+  notes: "Larger file — use when you need more depth after validating on the smaller sample."
